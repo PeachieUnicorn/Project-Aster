@@ -13,8 +13,8 @@ Build a portable AI assistant workflow inspired by the user's NOVA — School fo
 - Chosen assistant working identity: **Aster**.
 - Motto: **Curiosity with integrity. Capability with human control.**
 - GitHub account `PeachieUnicorn` has repositories `Project-NOVA` (private) and `Project-Aster` (public); the connected integration reported admin/push access to `Project-Aster`.
-- `Project-Aster` was initially empty. Its README was successfully created on 2026-10-22; other continuity files are being added and must be read back to verify.
-- Google Drive integration was found to be unavailable due to administrator policy in the current environment; no Drive writes were made.
+- `Project-Aster` was initially empty. Its README, identity charter, master context, session template, and initial study record were created and verified by readback on 2026-10-22.
+- Google Drive was subsequently connected. Aster — Continuity and Build Hub was created and verified: https://docs.google.com/document/d/1797qdpDPjeXWMCFDKSTOq2Pke9EiDbOoMV3tsRzV2Bc/edit . The APP/ Python MVP scaffold and CONTINUITY/SYNC_POLICY.md were committed to GitHub and verified.
 
 ## Decisions
 - Use Aster as the working identity name unless the user changes it.
@@ -23,13 +23,12 @@ Build a portable AI assistant workflow inspired by the user's NOVA — School fo
 - Prioritize privacy, evidence, independent critique, authorization, and verifiable outcomes.
 
 ## Open questions
-- Verify each continuity file exists in GitHub and can be read back.
-- Determine an authorized Google Drive storage route if an administrator makes a Drive connector available, or use a user-managed sync workflow.
-- Decide whether GitHub should remain the canonical source of truth and Drive a backup.
+- Define how to sync the GitHub canonical records to Google Drive with conflict handling and permissions.
+- Decide whether to deploy a continuously running runtime; current scaffold runs only when launched.
 - Define which categories of personal/project context are appropriate to store persistently.
 
 ## Next actions
-1. Finish adding `ASTER_IDENTITY.md`, the master context, session template, and initial study note.
-2. Read files back from `Project-Aster` to verify every write.
-3. Keep a change log and update the master context after significant verified decisions.
-4. Do not store credentials or raw private chat transcripts by default.
+1. Add automated tests and a local private memory store.
+2. Define OAuth scope and safe synchronization before connecting the runtime to Google Drive.
+3. Build a user interface and decide on deployment only with user approval.
+4. Keep a change log; do not store credentials or raw private chat transcripts by default.
